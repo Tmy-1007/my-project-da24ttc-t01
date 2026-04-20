@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang= "vi">
+<head>
+    <title>Phiếu đăng kí</title>
+    <meta charset= "utf-8">
+    <link rel= "stylesheet" href= "../css/style3.css">
+</head>    
+<body>
+    <form action="/action_page.php">
+       <h2>PHIẾU ĐĂNG KÝ</h2> 
+    <div class="container">
+       <h3>Thông tin cá nhân</h3>
+       <div class= "form1">
+            <label for="fullname">Họ và tên:</label>
+            <input type="text" id="fullname" name="fullname">
+
+            <label for="gioitinh">Giới tính:</lable>
+            <input type="radio" id="nu" name="gioitinh" value="Nữ">
+            <label for="nu">Nữ</label>
+            <input type="radio" id="nam" name="gioitinh" value="Nam">
+            <label for="nam">Nam</label>
+            <input type="radio" id="khac" name="gioitinh" value="Khác">
+            <label for="khac">Khác</label>
+            <br>
+            <label for="BDdate">Ngày sinh:</label>
+            <input type="date" id="BDdate" name="BDdate">
+
+            <label for="place">Nơi sinh:</label>
+            <select id="place" name="place">
+                <option>An Giang</option>
+                <option>Bà Rịa - Vũng Tàu</option>
+                <option>Bạc Liêu</option>
+                <option>Bắc Giang</option>
+                <option>Bắc Kạn</option>
+                <option>Bắc Ninh</option>
+                <option>Bến Tre</option>
+                <option>Bình Định</option>
+                <option>Bình Dương</option>
+                <option>Bình Phước</option>
+                <option>Bình Thuận</option>
+                <option>Cà Mau</option>
+                <option>Cần Thơ</option>
+                <option>Cao Bằng</option>
+                <option>Đà Nẵng</option>
+                <option>Đắk Lắk</option>
+                <option>Đắk Nông</option>
+                <option>Điện Biên</option>
+                <option>Đồng Nai</option>
+                <option>Đồng Tháp</option>
+                <option>Gia Lai</option>
+                <option>Hà Giang</option>
+                <option>Hà Nam</option>
+                <option>Hà Nội</option>
+                <option>Hà Tĩnh</option>
+                <option>Hải Dương</option>
+                <option>Hải Phòng</option>
+                <option>Hậu Giang</option>
+                <option>Hòa Bình</option>
+                <option>Hưng Yên</option>
+                <option>Khánh Hòa</option>
+                <option>Kiên Giang</option>
+                <option>Kon Tum</option>
+                <option>Lai Châu</option>
+                <option>Lâm Đồng</option>
+                <option>Lạng Sơn</option>
+                <option>Lào Cai</option>
+                <option>Long An</option>
+                <option>Nam Định</option>
+                <option>Nghệ An</option>
+                <option>Ninh Bình</option>
+                <option>Ninh Thuận</option>
+                <option>Phú Thọ</option>
+                <option>Phú Yên</option>
+                <option>Quảng Bình</option>
+                <option>Quảng Nam</option>
+                <option>Quảng Ngãi</option>
+                <option>Quảng Ninh</option>
+                <option>Quảng Trị</option>
+                <option>Sóc Trăng</option>
+                <option>Sơn La</option>
+                <option>Tây Ninh</option>
+                <option>Thái Bình</option>
+                <option>Thái Nguyên</option>
+                <option>Thanh Hóa</option>
+                <option>Thừa Thiên Huế</option>
+                <option>Tiền Giang</option>
+                <option>TP. Hồ Chí Minh</option>
+                <option>Trà Vinh</option>
+                <option>Tuyên Quang</option>
+                <option>Vĩnh Long</option>
+                <option>Vĩnh Phúc</option>
+                <option>Yên Bái</option>
+            </select>
+            <br>
+            <label for="cccd">Số định danh cá nhân/số CCCD:</label>
+            <input type="text" id="cccd" name="CCCD">
+
+            <label for="phonenumber">Số điện thoại:</label>
+            <input type="text" id="phonenumber" name="Số điện thoại">
+            <br>
+            <label for="location">Địa chỉ:</label>
+            <input type="text" id="location" name="Địa chỉ">
+       </div>
+       <h3>Thông tin sinh viên</h3>
+       <div class="school">
+            <label for="nameuni">Trường/Khoa:</label>
+            <input type="text" id="nameuni" name="truong/Khoa">
+            <label for="mssv">MSSV:</label>
+            <input type="text" id="mssv" name="mssv">
+            <br>
+            <label for="class">Lớp:</label>
+         <div class="lop">
+            <input type="checkbox" id="class" name="class" value="DA24TTA">
+            <label for="class">DA24TTA</label>
+            <input type="checkbox" id="class" name="class" value="DA24TTB">
+            <label for="class">DA24TTB</label>
+            <input type="checkbox" id="class" name="class" value="DA24TTC">
+            <label for="class">DA24TTC</label>
+            <input type="checkbox" id="class" name="class" value="DA24TTD">
+            <label for="class">DA24TTD</label>
+         </div>
+       </div>
+       <h4>Sở thích</h4>
+       <div class="hobbies">
+            <label for="hobby">Sở thích:</label>
+            <input type="checkbox" id="cook" name="cook" value="Nấu ăn">
+            <label for="hobby">Nấu ăn</label>
+            <input type="checkbox" id="dance/sing" name="dance/sing" value="Nhảy múa/Ca hát">
+            <label for="hobby">Nhảy múa/Ca hát</label>
+            <input type="checkbox" id="sport" name="sport" value="Chơi thể thao">
+            <label for="hobby">Chơi thể thao</label>
+            <input type="checkbox" id="different" name="different" value="Khác">
+            <label for="hobby">Khác:&nbsp;<input type="text" id="hobby" name="hobby"></label>
+       </div>
+       <fieldset>
+         <legend><h4>Sở trường</h4></legend>
+         <textarea style="width:100%; border:none; outline:none;" rows="4"></textarea>
+       </fieldset>
+
+       <label for="email"><b>Email:</b></label>
+       <input type="email" id="email" name="email">
+       <br>
+       <label for="myfile"><h4>Ảnh cá nhân</h4></label>
+       <input type="file" id="myfile" name="myfile">
+      <div class="button">
+         <input type="button" onclick="alert('Chào mừng bạn đã đăng ký thành công!')" value="Đăng ký">
+         <input type="button" onclick="alert('Vui lòng quay lại trang chủ hoặc nhập lại thông tin!')" value="Hủy bỏ">
+      </div> 
+    </div>
+    </form>
+</body>
+</html>
