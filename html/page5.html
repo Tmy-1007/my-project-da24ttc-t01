@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>In bảng cửu chương</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/style5.css">
+</head> 
+<body>
+    <form id="frmbangcuuchuong">
+        <h2>IN BẢNG CỬU CHƯƠNG</h2>
+        <Label for="cuuchuong">Nhập số: </Label>
+        <input type="number" id="so" name="so">
+        <input type="button" onclick="inbangcuuchuong()" value="In">
+        <div id="kq">
+        </div>
+    </form>
+    <script>
+        function inbangcuuchuong(){
+        const frm= document.forms["frmbangcuuchuong"];
+        const textfield= frm.elements[0];
+        let so= parseInt(textfield.value);
+        let kq="";
+        for(let i=1;i<=10;i++)
+            {
+                kq += so +" x "+ i +" = "+ (so*i)+ "<br>";
+            }
+            document.getElementById("kq").innerHTML= kq;
+        }
+    </script>
+</body>
+</html>
