@@ -1,0 +1,22 @@
+.product-item{
+    text-align: center;
+    color:rgb(161, 39, 199);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+    display:block;
+    weight: 200px;
+    height: 230px;
+}
+
+.img-in4{
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 10%;
+    color:black;
+}
+
+a{
+    color:palevioletred;
+}
