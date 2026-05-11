@@ -1,15 +1,15 @@
 ﻿//khai báo mảng đối tượng
 const productlist= [
-	{id: "01", name: "Bánh Black Swan", price= "$260", image= "../assets/images/blackswancake.jpg", productlink: "https://buttery.asia/blogs/news/banh-black-swan-la-gi"},
-	{id: "02", name: "Bánh Velvet", price= "$260", image= "../assets/images/blackswancake.jpg", productlink: "https://buttery.asia/blogs/news/banh-black-swan-la-gi"},
-	{id: "03", name: "Bánh Black Swan", price= "$260", image= "../assets/images/blackswancake.jpg", productlink: "https://buttery.asia/blogs/news/banh-black-swan-la-gi"},
-	{id: "04", name: "Bánh Black Swan", price= "$260", image= "../assets/images/blackswancake.jpg", productlink: "https://buttery.asia/blogs/news/banh-black-swan-la-gi"},
-	{id: "05", name: "Bánh Black Swan", price= "$260", image= "../assets/images/blackswancake.jpg", productlink: "https://buttery.asia/blogs/news/banh-black-swan-la-gi"},
-	{id: "06", name: "Bánh Black Swan", price= "$260", image= "../assets/images/blackswancake.jpg", productlink: "https://buttery.asia/blogs/news/banh-black-swan-la-gi"},
-	{id: "07", name: "Bánh Black Swan", price= "$260", image= "../assets/images/blackswancake.jpg", productlink: "https://buttery.asia/blogs/news/banh-black-swan-la-gi"},
-	{id: "08", name: "Bánh Black Swan", price= "$260", image= "../assets/images/blackswancake.jpg", productlink: "https://buttery.asia/blogs/news/banh-black-swan-la-gi"},
-	{id: "09", name: "Bánh Black Swan", price= "$260", image= "../assets/images/blackswancake.jpg", productlink: "https://buttery.asia/blogs/news/banh-black-swan-la-gi"},
-	{id: "10", name: "Bánh Black Swan", price= "$260", image= "../assets/images/blackswancake.jpg", productlink: "https://buttery.asia/blogs/news/banh-black-swan-la-gi"},
+	{id: "01", name: "Bánh Black Swan", price: "$260", image: "../assets/images/blackswancake.jpg", productlink: "product-detail.html"},
+	{id: "02", name: "Bánh Red Velvet", price: "$60", image: "../assets/images/red-velvet.jpg", productlink: "product-detail.html"},
+	{id: "03", name: "Bánh Bông lan trứng muối", price: "$20", image: "../assets/images/bong-lan-trung-muoi.jpg", productlink: "product-detail.html"},
+	{id: "04", name: "Bánh Cheese", price: "$55", image: "../assets/images/cheesecake.webp", productlink: "product-detail.html"},
+	{id: "05", name: "Bánh Chocolate Mousse", price: "$40", image: "../assets/images/chocomousse.jpg", productlink: "product-detail.html"},
+	{id: "06", name: "Bánh Lava", price: "$12", image: "../assets/images/lava.jpg", productlink: "product-detail.html"},
+	{id: "07", name: "Bánh Lemon", price: "$40", image: "../assets/images/lemon.jpg", productlink: "product-detail.html"},
+	{id: "08", name: "Bánh Matcha Entremet", price: "$20", image: "../assets/images/matcha-entremet.jpg", productlink: "product-detail.html"},
+	{id: "09", name: "Bánh Opera", price: "$45", image: "../assets/images/opera.jpg", productlink: "product-detail.html"},
+	{id: "10", name: "Bánh Tiramisu", price: "$31.2", image: "../assets/images/tiramisucake.jpg", productlink: "product-detail.html"},
 ]
 function addproduct(id, name, price, image, hyperlink)
 {
@@ -45,5 +45,17 @@ function addproduct(id, name, price, image, hyperlink)
 	//Tạo hyperlink
 	const productLink= document.createElement("a");
 	const productLinktext= document.createTextNode("Xem chi tiết");
-	productPrice.appendChild(productPricetext);
+	productLink.appendChild(productLinktext);
+	productLink.setAttribute("href", hyperLink);
+	productLink.setAttribute("class", "btn btn=outline-info btn-sm mt-auto");
+	//gán paragraph 1, 2 và link vào khung
+	productInfo.appendChild(productName);
+	productInfo.appendChild(productPrice);
+	productInfo.appendChild(productLink);
+
+	//6. Gán khung hình và khung thông tin vào product item
+	productItem.appendChild(productImage);
+	productItem.appendChild(productInfo);
+	//Gán product item vào product list
+	document.getElementById("product-list").appendChild(productItem);
 }
