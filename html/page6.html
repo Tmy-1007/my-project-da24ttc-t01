@@ -1,39 +1,26 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <title>Tạo newpage</title>
+    <title>Menu</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/style6.css">
+    <script src="../js/lib.js"></script>
 </head> 
 <body>
-    <script>
-        const newDiv= document.createElement("Div");
-        const newText= document.createTextNode("Thành công");
-        newDiv.setAttribute("class","product-item");
-        //Tạo phần hình
-        const newimage= document.createElement("div");
-        newimage.setAttribute("class","product-img");
-        //Chèn hình
-        const imageNode= document.createElement("img");
-        imageNode.setAttribute("src","../assets/images/blackswancake.jpg");
-        newimage.appendChild(imageNode);
-        //Chèn thông tin hình ảnh
-        const imgInfo= document.createElement("div");
-        imgInfo.setAttribute("class","img-in4");
-        
-        newDiv.appendChild(newText);
-        newDiv.appendChild(imageNode);
-        newDiv.appendChild(imgInfo);
-        document.body.appendChild(newDiv);
-    </script>
-    <div class="product-item">
-        <div class="img-in4">
-            <p>Name: Black Swan cake</p>
-            <p>Price: $260 USD</p>
-            <p>Origin: Holiland (China)</p>
-            <a href="https://baike.baidu.com/en/item/BLACKSWAN/1502148">Bài báo tiếng anh về bánh Black Swan</a><br>
-            <a href="https://buttery.asia/blogs/news/banh-black-swan-la-gi">Bài báo tiếng việt về bánh Black Swan</a>
+    <div class="container">
+        <div class="product-list row row-cols-2 row-cols-md-4 row-cols-lg-5 g-3" id="product-list">
         </div>
     </div>
+    <script>
+        productList.forEach(function(item) {
+            //truyền từng thuộc tính vào hàm
+            addProduct(item.id, item.name, item.price, item.image, item.productLink);
+        });
+        showProduct(productList);
+    </script>
 </body>
 </html>
