@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<body class="bd-light">
+    <div class="container my-5" style="max-width: 900px;">
+        <!-- Nút quay lại -->
+         <div class="mb-4">
+            <a href="../html/page6.html" class="btn btn-outline-secondary btn-sm">-> Quay lại danh sách</a>
+         </div>
+
+        <!-- khung chứa nội dung chi tiết sản phẩm -->
+         <div class="card shadow-sm p-4 bg-pink">
+            <div class="row g-4 align-items-start">
+                <!-- cột bên trái: ảnh sản phẩm (chiếm 5/12 cột trên màn hình lớn) -->
+                 <div class="col-md-5">
+                    <img id="p-image" src="DU_LIEU_SAN_PHAM_TAI_DAY" alt="Nội dung sản phẩm" class="img-fluid">
+                 </div>
+
+                <!-- cột bên phải: thông tin sản phẩm (chiếm 7/12 cột trên màn hình lớn) -->
+                 <div class="col-md-7">
+                    <!-- Tên sản phẩm -->
+                     <h1 id="p-name" class="h2 fw-bold text-dark mb-3">Tên sản phẩm</h1>
+
+                    <!-- Giá sản phẩm -->
+                     <h2 id="p-price" class="h4 text-danger fw-semibold mb-4">Giá sản phẩm</h2>
+                     <br>
+                     <h3 class="h6 fw-bold text-secondary text-uppercase mb-2">Mô tả sản phẩm</h3>
+                     
+                    <!-- Mô tả sản phẩm: canh đều (text-justify), giãn dòng 1.5 (lh-base) -->
+                     <p id="p-description" class="text-muted lh-base" style="text-align: justify;">
+                       Nội dung mô tả
+                     </p>
+                 </div>
+            </div>
+         </div>
+    </div>
+
+    <script src="../js/lib.js"></script>
+
+    <script>
+        //1. Lấy ID từ URL bằng URLSearchParms
+        const urlParams= new URLSearchParams(window.location.search);
+        const productId= urlParams.get('id'); //Kết quả là kiểu String (VD: "3")
+
+        //2. Dùng find để tìm đối tượng. Cần ép kiểu productId về number bằng Number() hoặc dấu +
+        const product= productlist.find(function(p) {
+            return p.id === productId;
+        });
+
+        //3. Truy xuất các trường dữ liệu khi đối tượng tồn tại
+        if (product) {
+            document.getElementById("p-image").src= product.image;
+            document.getElementById("p-name").innerHTML= product.name;
+            document.getElementById("p-price").innerHTML= "Giá bán nguyên ổ:" + product.price.toLocaleString('en-US') + "USD";
+            document.getElementById("p-description").innerHTML= product.desc;
+        }
+    </script>
+</body>
+</html>
