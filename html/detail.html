@@ -1,5 +1,16 @@
 <!DOCTYPE html>
 <html lang="vi">
+<head>
+    <title> Menu </title>
+    <!--<link rel = "stylesheet" href = "../css/style6.css">-->
+        <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset = "utf-8">
+    <script src="../js/lib.js"></script>
+</head>
 <body class="bd-light">
     <div class="container my-5" style="max-width: 900px;">
         <!-- Nút quay lại -->
@@ -8,11 +19,11 @@
          </div>
 
         <!-- khung chứa nội dung chi tiết sản phẩm -->
-         <div class="card shadow-sm p-4 bg-pink">
+         <div class="card shadow-sm p-4 bg-white">
             <div class="row g-4 align-items-start">
                 <!-- cột bên trái: ảnh sản phẩm (chiếm 5/12 cột trên màn hình lớn) -->
                  <div class="col-md-5">
-                    <img id="p-image" src="DU_LIEU_SAN_PHAM_TAI_DAY" alt="Nội dung sản phẩm" class="img-fluid">
+                    <img id="p-image" src="DU_LIEU_SAN_PHAM_TAI_DAY" alt="Nội dung sản phẩm" class="img-fluid rounded w-100">
                  </div>
 
                 <!-- cột bên phải: thông tin sản phẩm (chiếm 7/12 cột trên màn hình lớn) -->
@@ -22,10 +33,9 @@
 
                     <!-- Giá sản phẩm -->
                      <h2 id="p-price" class="h4 text-danger fw-semibold mb-4">Giá sản phẩm</h2>
-                     <br>
-                     <h3 class="h6 fw-bold text-secondary text-uppercase mb-2">Mô tả sản phẩm</h3>
                      
                     <!-- Mô tả sản phẩm: canh đều (text-justify), giãn dòng 1.5 (lh-base) -->
+                     <h3 class="h6 fw-bold text-secondary text-uppercase mb-2">Mô tả sản phẩm:</h3>
                      <p id="p-description" class="text-muted lh-base" style="text-align: justify;">
                        Nội dung mô tả
                      </p>
@@ -34,12 +44,10 @@
          </div>
     </div>
 
-    <script src="../js/lib.js"></script>
-
     <script>
         //1. Lấy ID từ URL bằng URLSearchParms
         const urlParams= new URLSearchParams(window.location.search);
-        const productId= urlParams.get('id'); //Kết quả là kiểu String (VD: "3")
+        const productId= urlParams.get("id"); //Kết quả là kiểu String (VD: "3")
 
         //2. Dùng find để tìm đối tượng. Cần ép kiểu productId về number bằng Number() hoặc dấu +
         const product= productlist.find(function(p) {
@@ -50,7 +58,7 @@
         if (product) {
             document.getElementById("p-image").src= product.image;
             document.getElementById("p-name").innerHTML= product.name;
-            document.getElementById("p-price").innerHTML= "Giá bán nguyên ổ:" + product.price.toLocaleString('en-US') + "USD";
+            document.getElementById("p-price").innerHTML= "Giá bán nguyên ổ: " + product.price.toLocaleString("en-US") + "USD";
             document.getElementById("p-description").innerHTML= product.desc;
         }
     </script>
